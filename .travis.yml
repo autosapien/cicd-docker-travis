@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: ap-southeast-1
   app: "cicd-docker-travis"
-  end: "CicdDockerTravis-env"
+  env: "CicdDockerTravis-env"
   bucket_name: "elasticbeanstalk-ap-southeast-1-823692275467"
   bucket_path: "cicd-docker-travis"
   on:
