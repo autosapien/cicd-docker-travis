@@ -10,6 +10,11 @@ In the project directory, you can run:
 
 Uses port 3000. browse to http://localhost/3000. One can edit files and live refresh works.
 
+### Test
+
+`docker run -e CI=true autosapien/cicd npm run test`
+
+
 ### Prod
 
 `docker build -t autosapien/cicd .`
@@ -17,3 +22,7 @@ Uses port 3000. browse to http://localhost/3000. One can edit files and live ref
 Builds the production container with nginx and to run the container use
 
 `docker run -p 8080:80 autosapien/cicd`
+
+### Deploy to AWS
+
+TODO
