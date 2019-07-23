@@ -21,7 +21,7 @@ Uses port 3000. browse to http://localhost/3000. One can edit files and live ref
 
 Builds the production container with nginx and to run the container use
 
-`docker run -p 8080:80 autosapien/cicd`
+`docker run -p 3000:3000 autosapien/cicd`
 
 ### Deploy to AWS
 
