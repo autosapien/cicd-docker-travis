@@ -4,4 +4,6 @@ services:
 
 before_install:
   - docker build -f Dockerfile.dev -t autosapien/cicd .
-  
+
+script:
+  - docker run autosapien/cicd .  
