@@ -6,4 +6,4 @@ before_install:
   - docker build -t autosapien/cicd -f Dockerfile.dev .
 
 script:
-  - docker run -p 3000:3000 autosapien/cicd
+  - docker run -e CI=true autosapien/cicd npm run test
