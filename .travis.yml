@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true autosapien/cicd npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-southeast-1
+  app: "cicd-docker-travis"
+  end: "CicdDockerTravis-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-823692275467"
+  bucket_path: "cicd-docker-travis"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
